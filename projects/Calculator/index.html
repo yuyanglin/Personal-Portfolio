@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+    <title>Calculator</title>
+    
+
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    
+</head>
+
+<body ng-app="calculationApp" ng-controller="calculationController">
+    
+
+    <div class="main">
+        <div class="row display">
+            <p class="number-disply">
+                {{displayStr}}
+                <br>
+                {{operator}}
+            </p>
+        </div>
+
+        <div class="panel">
+            <div class="row row-panel">
+                <div class="col-md-2">
+                    <button type="button" id="button-seven" class="btn btn-primary btn-lg" ng-click="updateDisplay(7)" 
+                        ng-disabled='signEnable' ">7</button>
+                </div>
+                <div class="col-md-2">
+                    <button type="button" id="button-eight" class="btn btn-primary btn-lg" ng-click="updateDisplay(8)"
+                        ng-disabled='signEnable'>8</button>
+                </div>
+                <div class="col-md-2">
+                    <button type="button" id="button-nine" class="btn btn-primary btn-lg" ng-click="updateDisplay(9)"
+                        ng-disabled='signEnable'>9</button>
+                </div>
+                 <div class="col-md-3">
+                    <button type="button" id="button-plus" class="btn btn-primary btn-lg" ng-click="updateDisplay(10)" 
+                        ng-disabled="!(prevNum && !prevOp || signEnable)">+</button>
+                </div>
+                 <div class="col-md-3">
+                    <button type="button" id="button-multiply" class="btn btn-primary btn-lg" ng-click="updateDisplay(12)"
+                        ng-disabled="!(prevNum && !prevOp || signEnable)">x</button>
+                </div>
+            </div>
+
+            <div class="row row-panel">
+                <div class="col-md-2">
+                    <button type="button" id="button-four" class="btn btn-primary btn-lg" ng-click="updateDisplay(4)"
+                        ng-disabled='signEnable'>4</button>
+                </div>
+                <div class="col-md-2">
+                    <button type="button" id="button-five" class="btn btn-primary btn-lg" ng-click="updateDisplay(5)"
+                        ng-disabled='signEnable'>5</button>
+                </div>
+                <div class="col-md-2">
+                    <button type="button" id="button-six" class="btn btn-primary btn-lg" ng-click="updateDisplay(6)"
+                        ng-disabled='signEnable'>6</button>
+                </div>
+                 <div class="col-md-3">
+                    <button type="button" id="button-minus" class="btn btn-primary btn-lg" ng-click="updateDisplay(11)"
+                        ng-disabled="!(prevNum && !prevOp || signEnable)">-</button>
+                </div>
+                 <div class="col-md-3">
+                    <button type="button" id="button-division" class="btn btn-primary btn-lg" ng-click="updateDisplay(13)"
+                        ng-disabled="!(prevNum && !prevOp || signEnable)">/</button>
+                </div>
+            </div>
+
+            <div class="row row-panel">
+                <div class="col-md-2">
+                    <button type="button" id="button-one" class="btn btn-primary btn-lg" ng-click="updateDisplay(1)" 
+                    ng-disabled='signEnable'>1</button>
+                </div>
+                <div class="col-md-2">
+                    <button type="button" id="button-two" class="btn btn-primary btn-lg" ng-click="updateDisplay(2)"
+                        ng-disabled='signEnable'>2</button>
+                </div>
+                <div class="col-md-2">
+                    <button type="button" id="button-three" class="btn btn-primary btn-lg" ng-click="updateDisplay(3)" 
+                        ng-disabled='signEnable'>3</button>
+                </div>
+                 <div class="col-md-3">
+                    <button type="button" id="button-clear" class="btn btn-primary btn-lg" ng-click="clear()">Clear</button>
+                </div>
+                 <div class="col-md-3">
+                    <button type="button" id="button-equal" class="btn btn-primary btn-lg" ng-click="callResult()">=</button>
+                </div>
+                 
+            </div>
+
+            <div class="row row-panel">
+                <div class="col-md-6">
+                    <button type="button" id="button-one" class="btn btn-primary btn-lg zero" ng-click="updateDisplay(0)"
+                        ng-disabled='signEnable'>0</button>
+                </div>
+                <div class="col-md-3">
+                    <button type="button" id="button-sign" class="btn btn-primary btn-lg" ng-click="putSign()">+/-</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <!-- Module -->
+    <script type="text/javascript">
+        var app = angular.module("calculationApp", []);
+    </script>
+
+    <!-- Controller -->
+    <script src="js/controllers/calculationController.js"></script>
+
+
+    <!-- Directive -->
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

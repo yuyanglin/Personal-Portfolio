@@ -1,0 +1,112 @@
+html, body {
+	background-color: #FFFFCC;
+	margin: 0;
+	padding: 0;
+}
+
+.header {
+  background-color: #A8A8A8;
+  box-shadow: 0 2px 2px rgba(0,0,0,.15);
+  display: block;
+  padding: 20px;
+  width: 100%;
+  text-align: center;
+  color: #00FF00;
+}
+
+.information {
+	padding: 10px;
+	width: 100%;
+	text-align: center;
+}
+
+.information h6 {
+	display: inline-block;
+	font-size: 30px;
+	padding-right: 80px;
+	color: #6600FF;
+}
+
+.information .clear-btn {
+	display: inline-block;
+}
+
+.main {
+	padding: 10px;
+	width: 100%;
+}
+
+.list p {
+  background: #FFFFFF;
+  box-shadow: 0 2px 2px #000000;
+  color: #473e39; 
+  font-size: 16px;
+  margin: 1px auto 5px;
+  padding: 20px;
+  max-width: 520px;
+}
+
+form.form {
+	color: #473e39; 
+	height: 120px;
+	margin: 0 auto 5px;
+	padding: 0;
+	width: 380px;
+}
+
+.form-container {
+	max-width: 380px;
+}
+
+.form input {
+
+  border: none;
+  box-shadow: 0 2px 2px rgba(0,0,0,.15);
+  float: left;
+  font-family: 'Arvo', serif;
+  font-size: 16px;
+  height: 60px;
+  margin: 30px 5px 0 0;
+  padding: 20px 20px;
+  width: 315px;
+}
+
+
+.form button.btn {
+  background: blue;
+  border: none;
+  border-radius: 0;
+  box-shadow: 0 2px 2px rgba(0,0,0,.15);
+  color: #fff;
+  float: left;
+  font-family: 'Arvo', serif;
+  font-size: 16px;
+  height: 60px;
+  width: 60px;
+  margin: 30px auto;
+}
+
+.list p .glyphicon-remove {
+  cursor: pointer;
+  float: right;
+}
+
+.list p .glyphicon-star {
+  cursor: pointer;
+  margin: 0 10px 0 10px;
+}
+
+.list p .glyphicon-star:hover, .list p .active {
+  color: #ffcc00;
+}
+
+.main .list .doneItem-true {
+  background-color : #6666FF;
+  color : #FFFFFF;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+

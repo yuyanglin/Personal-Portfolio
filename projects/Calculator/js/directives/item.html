@@ -1,0 +1,6 @@
+<p>
+    <input type="checkbox"  ng-model="item.done" ng-click="addToDoneList($index)">
+    <i class="glyphicon glyphicon-star"></i>
+    <span class="doneItem-{{item.done}}"> {{ item.name }}</span>
+    <i class="glyphicon glyphicon-remove" ng-click="removeItem($index)"></i>
+</p>

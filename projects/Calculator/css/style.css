@@ -1,0 +1,68 @@
+html, body {
+	background-color: #FFFFCC;
+	margin: 0;
+	padding: 0;
+  text-align: center;
+}
+
+.main {
+  background-color: #336600;
+  border-radius: 10px;
+  width: 800px;
+  height: 680px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  padding-top: 30px;
+  display: inline-block;
+}
+
+.display {
+  background-color: #E0E0E0;
+  width: 700px;
+  height: 150px;
+  border-radius: 10px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  border-top: 30px;
+  display: inline-block;
+}
+
+p {
+  margin-top: 15px;
+  text-align: right;
+  font-size: 40px;
+}
+
+.row {
+  padding-right: 50px;
+  padding-left: 20px;
+}
+
+.panel {
+  background-color: transparent;
+}
+
+.panel .row-panel {
+  margin-left: auto;
+  margin-right: auto;
+  background-color: transparent;
+}
+
+button {
+  margin-left: 20px;
+  margin-right: auto;
+  margin-top: 30px; 
+  padding-left: 30px;
+  padding-right: 20px;
+  position: relative;
+  width: 110px;
+  height: 90px;
+}
+
+.zero {
+  width: 100%;
+}
+

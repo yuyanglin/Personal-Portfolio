@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+    <title>To-Do List</title>
+    
+
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    
+</head>
+
+<body ng-app="listApp" ng-controller="listController">
+    <div class="header">
+        <h1>To-Do List</h1>
+    </div>
+
+    <form class="form" ng-submit="addItem()">
+    	<input id="todo" type="text" class="form-input" placeholder="Add Item" ng-model="inputItem"></input>
+    	<button type="button" class="btn" ng-click="addItem()">+</button>
+    </form>
+
+    <div class="information" ng-class"{test}">
+    	<h6> {{count}} Items Remaining</h6>
+    	<button type="button" class="btn btn-success clear-btn" ng-click="clearDoneList()">Clear Completed ToDos</button>
+        <button type="button" class="btn btn-success clear-btn" ng-click="markAll()">Mark All Done</button>
+    </div>
+
+    <div class="main" >
+        <div class="list">
+            <p ng-repeat= "item in items" ng-hide="item.done">
+                <input type="checkbox"  ng-model="item.done" ng-click="addToDoneList($index)">
+                <i class="glyphicon glyphicon-star"></i>
+                <span class="doneItem-{{item.done}}"> {{ item.name }}</span>
+                <i class="glyphicon glyphicon-remove" ng-click="removeItem($index)"></i>
+            </p>
+        </div>
+    </div>
+
+
+    <!-- Module -->
+    <script type="text/javascript">
+        var app = angular.module("listApp", []);
+    </script>
+
+    <!-- Controller -->
+    <script src="js/controllers/listController.js"></script>
+
+
+    <!-- Directive -->
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
